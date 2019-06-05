@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+//option java_multiple_files = true;
+
+option java_outer_classname = "HelloProtos";
+option java_package = "com.atinbo";
+//option java_multiple_files = true;
+option java_generic_services = true;
+
+
+message Request {
+    int32 no = 1;
+    string param = 2;
+}
+
+message Response {
+    int32 status = 1;
+    string messsage = 2;
+}
+
+service HelloService {
+    rpc doAct (Request) returns (Response);
+}
+
+
+
